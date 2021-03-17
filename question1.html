@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function func()
+		{
+			var x;
+		    x= parseInt(document.getElementById("time").value);
+   		    var hours, minutes, seconds;
+   		    seconds=x;
+		   minutes=parseInt(x/60);
+		   hours=parseInt(minutes/60);
+		   seconds=seconds%60;
+           document.getElementById("output1").innerHTML=hours;
+           document.getElementById("output2").innerHTML=minutes;
+           document.getElementById("output3").innerHTML=seconds;
+		}
+		
+	</script>
+
+</head>
+<body>
+	<h4>Calculate Time</h4>
+    
+    	<label for="time">Input Time in seconds:</label>
+    	<input type="text" id="time" name="time">
+    	<button onclick="func()">Submit</button>
+   
+    <p>Hours:</p>
+    <p id="output1"></p>
+    <p>Minutes:</p>
+    <p id="output2"></p>
+    <p>seconds</p>
+    <p id="output3"></p>
+</body>
+</html>
