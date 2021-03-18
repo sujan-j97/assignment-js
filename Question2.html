@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		
+			
+			function func()
+			{
+			 var x;		   
+		    x= parseInt(document.getElementById("count").value);
+		    document.getElementById("output").innerHTML = "input "+ x + " two digit values(LR) in textbox and click on submit each time";
+		    document.getElementById("btn1").disabled = true;
+          
+          }
+          
+          var arr = [];
+          function func2()
+          {
+           var x;	
+           x= parseInt(document.getElementById("num").value);
+           arr.push(x);
+
+           document.getElementById("output2").innerHTML = arr;
+          
+          }
+
+          var outarr = [];
+         
+         function func3()
+         {
+         	for (var i=0;i<arr.length;i++)
+          {
+          	var m,n;
+          	m=arr[i];
+          	m=m/10;
+          	n=arr[i]%10;
+          	var result;
+          	result=m ^ n;
+            if(result%2==0)
+          		outarr.push("Even");
+          	else
+          		outarr.push("Odd");
+
+          }
+          document.getElementById("output3").innerHTML = outarr;
+
+         }
+
+          
+
+     </script>
+
+</head>
+
+<body>
+    	<p>Input no. of test cases</p>
+    	<input type="text" id="count" name="count">
+    	<button id="btn1" onclick="func()">Input</button>
+    	<p id="output"></p>
+    	<input type="text" id="num" name="num">
+    	<button id="btn2" onclick="func2()">Submit</button>
+    	<p id="output2"></p> 
+    	<button id="btn3" onclick="func3()">Show Result</button>
+    	<p id="output3"></p> 
+</body>
+</html>
