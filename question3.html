@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+		var strarr = [];
+		var m;
+		var n=0;
+		function func1()
+		{
+			 m = parseInt(document.getElementById("input").value);
+		}
+		function func2()
+          { 
+          	n=n+1;
+           var x;	
+           x = document.getElementById("str").value;
+           strarr.push(x);
+
+           document.getElementById("output1").innerHTML = strarr;
+          var bt = document.getElementById('btn2');
+            
+            if(n==m)
+          	   bt.disabled=true;
+          	else
+          		 bt.disabled=false;
+
+          }
+
+          function func3()
+          {
+          	strarr.sort();
+          	document.getElementById("output2").innerHTML = strarr;
+          }
+
+	</script>
+
+</head>
+
+<body>
+	<p>Input no. of strings</p>
+	<input type="text" id="input" name="input">
+	<button id="btn1" onclick="func1()">Input</button>
+	<p>Enter string in the textbox and click on submit each time. </p>
+	<input type="text" id="str" name="str">
+	<button id="btn2" onclick="func2()">Submit</button>
+	<br>
+	<p id="output1"></p>
+	<button id="btn3" onclick="func3()">Sort Strings</button>
+	<p id="output2"></p>
+
+</body>
+
+</html>
